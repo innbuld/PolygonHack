@@ -11,27 +11,36 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverBody,
-  PopoverFooter,
   PopoverArrow,
   PopoverCloseButton,
-  PopoverAnchor,
   Icon,
 } from "@chakra-ui/react";
-import { AiOutlineMenuFold } from "react-icons/ai";
+import { AiOutlineMenuFold, AiOutlineMenu } from "react-icons/ai";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Flex
       justifyContent="space-between"
-      borderWidth="1px"
+      borderBottomWidth="2px"
       borderBottomColor="teal"
       px="4"
       py="6"
       alignItems="center"
       bg="#1a202c"
+      color="white"
     >
       <Flex gap="8" justifyContent="space-between" alignItems="center">
-        <Icon as={AiOutlineMenuFold} w="16" h="6" alignSelf="center" />
+        <Icon
+          as={!isOpen ? AiOutlineMenu : AiOutlineMenuFold}
+          w="16"
+          h="6"
+          alignSelf="center"
+          cursor="pointer"
+          onClick={() => setIsOpen(!isOpen)}
+        />
+
         <Box>
           <Heading>PolyFlex</Heading>
         </Box>
@@ -39,7 +48,7 @@ export default function Navbar() {
       <Flex gap="4" alignItems="center" justifyContent="space-between">
         <Popover>
           <PopoverTrigger>
-            <Button>Trigger</Button>
+            <Button colorScheme="teal">Trigger</Button>
           </PopoverTrigger>
           <PopoverContent>
             <PopoverArrow />

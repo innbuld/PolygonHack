@@ -1,23 +1,5 @@
 import React, { useState } from "react";
-import {
-  Button,
-  chakra,
-  Flex,
-  Text,
-  Tooltip,
-  Heading,
-  Box,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor,
-  Icon,
-} from "@chakra-ui/react";
+import { chakra, Flex, Tooltip, Icon } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
 import { RiHome2Line, RiUploadCloudLine } from "react-icons/ri";
@@ -35,7 +17,14 @@ export default function Sidebar() {
   ];
 
   return (
-    <chakra.div w="7%" h="86vh" bg="#1a202c">
+    <chakra.div
+      w="7%"
+      h="86vh"
+      borderRightWidth="1px"
+      borderRightColor="teal"
+      bg="#1a202c"
+      mt="0"
+    >
       {isOpen ? (
         <Flex
           gap={10}
@@ -44,9 +33,6 @@ export default function Sidebar() {
           py={3}
           h="inherit"
           justifyContent="center"
-          borderWidth="1px"
-          borderTopColor="none"
-          borderRightColor="teal"
         >
           {icons.map((item, i) => (
             <Tooltip
@@ -71,7 +57,7 @@ export default function Sidebar() {
                 onClick={() => router.push("/")}
                 as="a"
               >
-                <Icon as={item.icon} />
+                <Icon as={item.icon} color="white" />
               </chakra.div>
             </Tooltip>
           ))}
