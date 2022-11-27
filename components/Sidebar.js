@@ -4,6 +4,7 @@ import {
   chakra,
   Flex,
   Text,
+  Tooltip,
   Heading,
   Box,
   Popover,
@@ -24,11 +25,12 @@ import { MdAccountCircle } from "react-icons/md";
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
   const icons = [
-    RiHome2Line,
-    RiUploadCloudLine,
-    FcMoneyTransfer,
-    MdAccountCircle,
+    { icon: RiHome2Line, name: "Home" },
+    { icon: RiUploadCloudLine, name: "Upload" },
+    { icon: FcMoneyTransfer, name: "Funds" },
+    { icon: MdAccountCircle, name: "Account" },
   ];
+
   return (
     <chakra.div w="7%" h="86vh">
       {isOpen ? (
@@ -43,21 +45,30 @@ export default function Sidebar() {
           borderTopColor="none"
           borderRightColor="teal"
         >
-          {icons.map((item) => (
-            <chakra.div
-              cursor="pointer"
-              w="full"
-              py="3"
-              _hover={{
-                borderRightWidth: "3px",
-                borderRightColor: "teal",
-                bg: "#0dccd2",
-              }}
-              textAlign="center"
-              transition=".1s ease-in-out"
+          {icons.map((item, i) => (
+            <Tooltip
+              label={item.name}
+              hasArrow
+              bg="#0a6265"
+              placement="right"
+              key={i}
+              color="white"
             >
-              <Icon as={item} />
-            </chakra.div>
+              <chakra.div
+                cursor="pointer"
+                w="full"
+                py="3"
+                _hover={{
+                  borderRightWidth: "3px",
+                  borderRightColor: "teal",
+                  bg: "#0dccd2",
+                }}
+                textAlign="center"
+                transition=".1s ease-in-out"
+              >
+                <Icon as={item.icon} />
+              </chakra.div>
+            </Tooltip>
           ))}
         </Flex>
       ) : (
