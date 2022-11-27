@@ -28,6 +28,7 @@ export default function Navbar() {
       px="4"
       py="6"
       alignItems="center"
+      bg="#1a202c"
     >
       <Flex gap="8" justifyContent="space-between" alignItems="center">
         <Icon as={AiOutlineMenuFold} w="16" h="6" alignSelf="center" />

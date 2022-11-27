@@ -18,12 +18,15 @@ import {
   PopoverAnchor,
   Icon,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
+
 import { RiHome2Line, RiUploadCloudLine } from "react-icons/ri";
 import { FcMoneyTransfer } from "react-icons/fc";
 import { MdAccountCircle } from "react-icons/md";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
+  const router = useRouter();
   const icons = [
     { icon: RiHome2Line, name: "Home" },
     { icon: RiUploadCloudLine, name: "Upload" },
@@ -32,7 +35,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <chakra.div w="7%" h="86vh">
+    <chakra.div w="7%" h="86vh" bg="#1a202c">
       {isOpen ? (
         <Flex
           gap={10}
@@ -65,6 +68,8 @@ export default function Sidebar() {
                 }}
                 textAlign="center"
                 transition=".1s ease-in-out"
+                onClick={() => router.push("/")}
+                as="a"
               >
                 <Icon as={item.icon} />
               </chakra.div>
