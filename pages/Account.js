@@ -5,45 +5,48 @@ import{RiRefund2Fill} from "react-icons/ri"
 
 export default function Account() {
   return (
-    <Flex w={'full'} justifyContent={"center"}  p='36' height={'100'} position='relative'  >
-      <Box borderWidth={'2px'} borderRadius={'lg'} shadow='2xl' backgroundColor='ash' p={'12'} mt='14' mr='24' rounded={'20'} >
-        <Box mt='-12' fontSize={'2xl'}   >
-         <Text >Uploads </Text>
-         <Flex>
-         <Box cursor={'pointer'} ml='2' mt='8' bottom={'3'} >
-           <AiFillPlusSquare></AiFillPlusSquare>
-         </Box>
-         </Flex>
-         
+    <Flex  width={'256'} justifyContent={'space-between'} alignItems="center" gap={'2'} p='32' >
+      
+      <Box borderWidth={'2px'} borderRadius={'lg'} height='32' shadow='2xl' backgroundColor='ash' p={'12'} mb='56' mr='24' rounded={'20'}>
+        <Box mt='-12' fontSize={'3xl'} >
+          <Text as={'b'} >Uploads </Text>
+          <Box cursor={'pointer'} ml='8' mt='8'  >
+            <AiFillPlusSquare></AiFillPlusSquare>
+          </Box>
+        </Box>
+      </Box>
 
-        </Box>        
-     </Box>
+      <Box borderWidth={'2px'} borderRadius={'lg'} height='32' shadow='2xl' backgroundColor='ash' p={'12'} mb='56' mr='24' rounded={'20'}>
+        <Box mt='-12' fontSize={'3xl'} >
+          <Text as={'b'} >Funds </Text>
+          <Box cursor={'pointer'} ml='8' mt='8'  >
+             <RiRefund2Fill></RiRefund2Fill>
+          </Box>
+        </Box>
+      </Box>
 
-     <Flex w={'full'} >
-     <Box borderWidth={'2px'} borderRadius={'lg'} shadow='2xl' backgroundColor='ash' p={'12'} mt='14' mr={'28%'} rounded={'20'} >
-        <Box mt='-12' fontSize={'2xl'}  >
-         <Text >Funds </Text>
-         <Flex>
-         <Box cursor={'pointer'} mr='20' mt={'6'} >
-           <RiRefund2Fill></RiRefund2Fill>
-         </Box>
-         </Flex>
-         
-        
-       
-        
-
-        </Box>        
-     </Box>
-
-    
+     <Flex>
+       <Box mt={'56'} borderWidth={'2px'} ml='-96'  borderRadius={'lg'} height='32' shadow='2xl' backgroundColor='ash' p={'12'}   rounded={'20'} >
+        <Box  >
+          <Text>ncdm</Text>
+        </Box>
+       </Box>
      </Flex>
 
-     
-       
+
+
+
+      
 
 
     </Flex>
+
+    
+    
+    
+    
+
+    
 
 
 
@@ -60,3 +63,14 @@ export default function Account() {
 {/* <Box position={'absolute'} left={"3"} bottom={"2"} cursor={"pointer"} >
           <AiFillPlusSquare></AiFillPlusSquare>
          </Box */}
+
+
+
+
+
+
+
+
+
+
+
