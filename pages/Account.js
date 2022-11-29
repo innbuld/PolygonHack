@@ -1,79 +1,99 @@
-import React from 'react'
-import { Button, Flex, Heading, Text, Box } from "@chakra-ui/react";
-import{AiFillPlusSquare} from "react-icons/ai"
-import{RiRefund2Fill} from "react-icons/ri"
+import React from "react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Text,
+  Box,
+  Icon,
+  VStack,
+  HStack,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  Circle,
+} from "@chakra-ui/react";
+import { AiFillPlusSquare } from "react-icons/ai";
+import { RiRefund2Fill } from "react-icons/ri";
 
 export default function Account() {
   return (
-    <Flex  width={'256'} justifyContent={'space-between'} alignItems="center" p='32' >
-      
-      <Box borderWidth={'2px'} borderRadius={'lg'} height='32' shadow='dark-lg' backgroundColor='ash' p={'12'} mb='72' mr='24' rounded={'20'}>
-        <Box mt='-12' fontSize={'3xl'} >
-          <Text as={'b'} >Uploads </Text>
-          <Box cursor={'pointer'} ml='8' mt='8'  >
-            <AiFillPlusSquare></AiFillPlusSquare>
-          </Box>
-        </Box>
-      </Box>
+   
 
-      <Box borderWidth={'2px'} borderRadius={'lg'} height='32' shadow='dark-lg' backgroundColor='ash' p={'12'} mb='72' mr='24' rounded={'20'}>
-        <Box mt='-12' fontSize={'3xl'} >
-          <Text as={'b'} >Funds </Text>
-          <Box cursor={'pointer'}  mt='8'  >
-             <RiRefund2Fill></RiRefund2Fill>
-          </Box>
-        </Box>
-      </Box>
+    <Flex flexDir="column" w="full" px="5" gap="10">
+      <HStack gap="10" w="full" alignItems="center" py="4" px="10">
+        <Circle size="100px" bg="tomato" color="white"></Circle>
+        <VStack>
+          <Text fontSize="3xl" fontWeight="bold">
+            AbdulMuizz
+          </Text>
+          <Text> 0xt4jh4h5g5j3bh5j5j4h4k4h3k5h4j539394b</Text>
+        </VStack>
+      </HStack>
 
-     <Flex ml={'-52'}  >
-       <Box mt={'56'} borderWidth={'2px'} ml='-96'   borderRadius={'lg'} height='60' shadow={'dark-lg'} backgroundColor='ash' p={'12'}  width='sm' rounded={'20'} >
-        <Box mt={'-12'} borderBottomWidth='2px'>
-          <Heading>Latest Activity</Heading>
-          <Flex>
-            <Text>ff</Text>
-          </Flex>
-        </Box>
-       </Box>
-     </Flex>
+      <Flex
+        w="full"
+        alignItems="center"
+        justifyContent="space-between"
+        py="4"
+        px="10"
+      >
+        <VStack py="5" px="3" borderRadius="25px" gap="3" borderWidth="1px">
+          <Text fontSize="3xl" fontWeight="bold">
+            Number Of Uploads
+          </Text>
+          <HStack w="full" justifyContent="center">
+            <Text fontSize="md">208</Text>
+            <Icon cursor='pointer' as={AiFillPlusSquare} />
+          </HStack>
+        </VStack>
+        <VStack py="5" px="3" borderRadius="25px" gap="3" borderWidth="1px">
+          <Text fontSize="3xl" fontWeight="bold">
+            Number Of Uploads
+          </Text>
+          <HStack w="full" justifyContent="center">
+            <Text fontSize="md">208</Text>
+            <Icon cursor='pointer'  as={AiFillPlusSquare} />
+          </HStack>
+        </VStack>
+        <VStack py="5" px="3" borderRadius="25px" gap="3" borderWidth="1px">
+          <Text fontSize="3xl" fontWeight="bold">
+            Number Of Uploads
+          </Text>
+          <HStack w="full" justifyContent="center">
+            <Text fontSize="md">208</Text>
+            <Icon cursor='pointer'  as={AiFillPlusSquare} />
+          </HStack>
+        </VStack>
+      </Flex>
+      <Tabs
+        mx="10"
+        px="3"
+        py="2"
+        borderColor="1px"
+        borderWidth="1px"
+        borderRadius="10px"
+      >
+        <TabList>
+          <Tab>One</Tab>
+          <Tab>Two</Tab>
+          <Tab>Three</Tab>
+        </TabList>
 
-
-
-
-      
-
-
+        <TabPanels>
+          <TabPanel>
+            <p>one!</p>
+          </TabPanel>
+          <TabPanel>
+            <p>two!</p>
+          </TabPanel>
+          <TabPanel>
+            <p>three!</p>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
     </Flex>
-
-    
-    
-    
-    
-
-    
-
-
-
-
-
-
-
-    
-  )
+  );
 }
-
-
-
-{/* <Box position={'absolute'} left={"3"} bottom={"2"} cursor={"pointer"} >
-          <AiFillPlusSquare></AiFillPlusSquare>
-         </Box */}
-
-
-
-
-
-
-
-
-
-
-

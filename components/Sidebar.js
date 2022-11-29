@@ -16,6 +16,10 @@ export default function Sidebar() {
     { icon: MdAccountCircle, name: "Account" },
   ];
 
+  const routing = (uri) => {
+    uri == "Home" ? router.push("/") : router.push(`/${uri}`);
+  };
+
   return (
     <chakra.div
       w="7%"
@@ -54,7 +58,7 @@ export default function Sidebar() {
                 }}
                 textAlign="center"
                 transition=".1s ease-in-out"
-                onClick={() => router.push("/")}
+                onClick={() => routing(item.name)}
                 as="a"
               >
                 <Icon as={item.icon} color="white" />
