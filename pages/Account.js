@@ -20,8 +20,6 @@ import { RiRefund2Fill } from "react-icons/ri";
 
 export default function Account() {
   return (
-   
-
     <Flex flexDir="column" w="full" px="5" gap="10">
       <HStack gap="10" w="full" alignItems="center" py="4" px="10">
         <Circle size="100px" bg="tomato" color="white"></Circle>
@@ -46,7 +44,7 @@ export default function Account() {
           </Text>
           <HStack w="full" justifyContent="center">
             <Text fontSize="md">208</Text>
-            <Icon cursor='pointer' as={AiFillPlusSquare} />
+            <Icon cursor="pointer" as={AiFillPlusSquare} />
           </HStack>
         </VStack>
         <VStack py="5" px="3" borderRadius="25px" gap="3" borderWidth="1px">
@@ -55,7 +53,7 @@ export default function Account() {
           </Text>
           <HStack w="full" justifyContent="center">
             <Text fontSize="md">208</Text>
-            <Icon cursor='pointer'  as={AiFillPlusSquare} />
+            <Icon cursor="pointer" as={AiFillPlusSquare} />
           </HStack>
         </VStack>
         <VStack py="5" px="3" borderRadius="25px" gap="3" borderWidth="1px">
@@ -64,7 +62,7 @@ export default function Account() {
           </Text>
           <HStack w="full" justifyContent="center">
             <Text fontSize="md">208</Text>
-            <Icon cursor='pointer'  as={AiFillPlusSquare} />
+            <Icon cursor="pointer" as={AiFillPlusSquare} />
           </HStack>
         </VStack>
       </Flex>
@@ -76,7 +74,11 @@ export default function Account() {
         borderWidth="1px"
         borderRadius="10px"
       >
+         <Flex mb={'4'}>
+            <Text>La</Text>
+          </Flex>
         <TabList>
+         
           <Tab>One</Tab>
           <Tab>Two</Tab>
           <Tab>Three</Tab>

@@ -28,15 +28,27 @@ export default function Upload() {
         <Heading>Upload</Heading>
       </Flex>
 
-      <FormControl w={'xl'} mr='72'>
-        <FormLabel>Heading</FormLabel>
-        <Input placeholder="Add Your File Heading" variant={'filled'} size='sm' />
-      </FormControl>
+      <Flex mt={"-12"} mr="32">
+        <FormControl isRequired w={"xl"} mr="96">
+          <FormLabel>File Heading</FormLabel>
+          <Input
+            placeholder="Add Your File Heading"
+            variant={"filled"}
+            size="sm"
+          />
+        </FormControl>
+      </Flex>
 
-      <FormControl mt='8'>
-        <FormLabel>Heading</FormLabel>
-        <Input placeholder="Add Your File Heading" size='lg' />
-      </FormControl>
+      <Flex mr="32" >
+        <FormControl isRequired mt="8" w={"xl"} mr="96">
+          <FormLabel>Description</FormLabel>
+          <Input
+            placeholder="Input Your description here"
+            variant={"filled"}
+            size="lg"
+          />
+        </FormControl>
+      </Flex>
     </Flex>
   );
 }
