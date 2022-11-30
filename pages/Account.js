@@ -74,14 +74,15 @@ export default function Account() {
         borderWidth="1px"
         borderRadius="10px"
       >
-         <Flex mb={'4'}>
-            <Text>La</Text>
+         <Flex mb={'4'} as='b'>
+            <Text>Latest Activity</Text>
           </Flex>
         <TabList>
          
-          <Tab>One</Tab>
-          <Tab>Two</Tab>
-          <Tab>Three</Tab>
+          <Tab>Description of file uploaded</Tab>
+          <Tab>File Type</Tab>
+          <Tab>Date</Tab>
+          <Tab>Size</Tab>
         </TabList>
 
         <TabPanels>

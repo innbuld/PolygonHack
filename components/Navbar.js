@@ -47,7 +47,7 @@ export default function Navbar() {
       <Flex gap="4" alignItems="center" justifyContent="space-between">
         <Popover>
           <PopoverTrigger>
-            <Button colorScheme="teal">Trigger</Button>
+            <Button colorScheme="teal">Account</Button>
           </PopoverTrigger>
           <PopoverContent>
             <PopoverArrow />
