@@ -1,27 +1,42 @@
-import React from 'react'
-import { Button, Flex, Heading, Text, Box } from "@chakra-ui/react";
-import{AiFillPlusSquare} from "react-icons/ai"
-
+import React from "react";
+import {
+  Button,
+  Flex,
+  Stack,
+  Input,
+  Heading,
+  Text,
+  FormControl,
+  FormLabel,
+  FormHelperText,
+  Box,
+} from "@chakra-ui/react";
+import { AiFillPlusSquare } from "react-icons/ai";
+import Head from "next/head";
 
 export default function Upload() {
   return (
-   <Flex justifyContent={'center'} width='full' height={'100'}>
-     <Box  height='32' shadow='dark-lg' mt='52'  p={'12'}  mr='24' rounded={'20'}>
-        <Box mt='-8' fontSize={'3xl'} >
-          <Text as={'b'} >Upload </Text>
-          <Box cursor={'pointer'} ml='8' mt='2'  >
-           <AiFillPlusSquare></AiFillPlusSquare>
-          </Box>
-        </Box>
-      </Box>
+    <Flex
+      py="4"
+      px="10"
+      mt="12"
+      w="full"
+      direction="column"
+      alignItems={"center"}
+    >
+      <Flex mb="20">
+        <Heading>Upload</Heading>
+      </Flex>
 
+      <FormControl w={'xl'} mr='72'>
+        <FormLabel>Heading</FormLabel>
+        <Input placeholder="Add Your File Heading" variant={'filled'} size='sm' />
+      </FormControl>
 
-
-
-
-
-
-
-   </Flex>
-  )
+      <FormControl mt='8'>
+        <FormLabel>Heading</FormLabel>
+        <Input placeholder="Add Your File Heading" size='lg' />
+      </FormControl>
+    </Flex>
+  );
 }
