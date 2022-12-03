@@ -23,6 +23,7 @@ export default function Upload() {
       w="full"
       direction="column"
       alignItems={"center"}
+      bg="#1a202c"
     >
       <Flex mb="20">
         <Heading>Upload</Heading>
@@ -39,7 +40,7 @@ export default function Upload() {
         </FormControl>
       </Flex>
 
-      <Flex mr="32" >
+      <Flex mr="32">
         <FormControl isRequired mt="8" w={"xl"} mr="96">
           <FormLabel>Description</FormLabel>
           <Input

@@ -20,7 +20,7 @@ import { RiRefund2Fill } from "react-icons/ri";
 
 export default function Account() {
   return (
-    <Flex flexDir="column" w="full" px="5" gap="10">
+    <Flex flexDir="column" w="full" px="5" gap="10" bg="#1a202c">
       <HStack gap="10" w="full" alignItems="center" py="4" px="10">
         <Circle size="100px" bg="tomato" color="white"></Circle>
         <VStack>
@@ -74,11 +74,10 @@ export default function Account() {
         borderWidth="1px"
         borderRadius="10px"
       >
-         <Flex mb={'4'} as='b'>
-            <Text>Latest Activity</Text>
-          </Flex>
+        <Flex mb={"4"} as="b">
+          <Text>Latest Activity</Text>
+        </Flex>
         <TabList>
-         
           <Tab>Description of file uploaded</Tab>
           <Tab>File Type</Tab>
           <Tab>Date</Tab>
